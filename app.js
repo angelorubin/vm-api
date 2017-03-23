@@ -30,7 +30,7 @@ app.use(express.static(path.join(__dirname, 'public')))
  */
 const users = require('./modules/users')
 
-app.get('/api' () => {
+app.get('/api' (req, res) => {
     res.json({ message : 'Bem vindo a API da Virginia Modas.'})
 })
 
