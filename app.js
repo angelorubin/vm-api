@@ -30,24 +30,18 @@ app.use(express.static(path.join(__dirname, 'public')))
  */
 const users = require('./modules/users')
 
-<<<<<<< HEAD
 app.get('/api' () => {
     res.json({ message : 'Bem vindo a API da Virginia Modas.'})
 })
 
-=======
->>>>>>> 4862f893736fb55e702ced97d693c19ffef1b959
 /**
  * Middlewares routes
  */
 app.use('/api/users', users)
 
-
-<<<<<<< HEAD
-=======
 /*
 
->>>>>>> 4862f893736fb55e702ced97d693c19ffef1b959
+ */
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
     const err = new Error('Not Found')
@@ -61,11 +55,8 @@ app.use(function(req, res, next) {
 // will print stacktrace
 if (app.get('env') === 'development') {
     app.use( (err, req, res, next) => {
-<<<<<<< HEAD
         // res.json(err.status || 500)
-=======
         res.json(err.status || 500)
->>>>>>> 4862f893736fb55e702ced97d693c19ffef1b959
         res.json('error', {
             message: err.message,
             error: err
@@ -76,20 +67,12 @@ if (app.get('env') === 'development') {
 // production error handler
 // no stacktraces leaked to user
 app.use( (err, req, res, next) => {
-<<<<<<< HEAD
     // res.json(err.status || 500)
-=======
     res.json(err.status || 500)
->>>>>>> 4862f893736fb55e702ced97d693c19ffef1b959
     res.json('error', {
         message: err.message,
         error: {}
     })
 })
 
-<<<<<<< HEAD
-=======
-*/
-
->>>>>>> 4862f893736fb55e702ced97d693c19ffef1b959
 module.exports = app
